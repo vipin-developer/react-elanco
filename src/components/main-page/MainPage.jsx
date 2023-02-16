@@ -26,7 +26,7 @@ const MainPage = () => {
   };
 
   useEffect(() => {
-    callApi("GET", "raw", {})
+    callApi("raw")
       .then((resp) => {
         const tableData = aggregateArray(resp);
         // console.log(tableData);

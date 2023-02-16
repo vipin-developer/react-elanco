@@ -1,13 +1,4 @@
-const callApi = async (method, url, params) => {
-  let headers = {
-    "Content-Type": "application/json",
-  };
-  let options = {
-    mode: "cors",
-    method,
-    headers,
-    body: params,
-  };
+const callApi = async (url) => {
   try {
     const response = await fetch(
       `https://engineering-task.elancoapps.com/api/` + url

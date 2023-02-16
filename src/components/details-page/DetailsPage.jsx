@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Button, Icon, Image, Modal, Card } from "semantic-ui-react";
+import React, { useState } from "react";
+import { Button, Icon, Modal, Card } from "semantic-ui-react";
 
 const DetailsPage = ({ modalState, details }) => {
   const [open, setOpen] = useState(modalState);
@@ -22,10 +22,8 @@ const DetailsPage = ({ modalState, details }) => {
               <Card.Description>{details.Date}</Card.Description>
             </Card.Content>
             <Card.Content extra>
-              <a>
-                <Icon name="rupee" />
-                {details.Cost}
-              </a>
+              <Icon name="rupee" />
+              {details.Cost}
             </Card.Content>
           </Card>
         </Modal.Content>
