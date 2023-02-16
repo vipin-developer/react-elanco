@@ -13,7 +13,6 @@ const MainPage = () => {
         (obj) => Object.keys(obj)[0] === val.ServiceName
       );
       if (index !== -1) {
-        // console.log(val.Cost);
         acc[index][val.ServiceName].TotalCost +=
           val.Cost === undefined ? 0 : val.Cost * 1;
       } else {
@@ -29,7 +28,6 @@ const MainPage = () => {
     callApi("raw")
       .then((resp) => {
         const tableData = aggregateArray(resp);
-        // console.log(tableData);
         setTableData(tableData);
       })
       .catch((err) => {});
